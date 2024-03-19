@@ -1,27 +1,47 @@
 # BookBoost
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+![BookBoost](./src/assets/logo.PNG)
 
-## Development server
+BookBoost è un'applicazione web che consente agli utenti di cercare e visualizzare informazioni sui libri.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Caratteristiche
 
-## Code scaffolding
+- Visualizzazione di una lista di libri con titoli e autori.
+- Possibilità di cercare libri per categoria.
+- Visualizzazione delle descrizioni dettagliate per ogni libro.
+- Interfaccia utente intuitiva.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologie Utilizzate
 
-## Build
+- Angular: framework per lo sviluppo front-end.
+- TypeScript: linguaggio di programmazione per lo sviluppo di Angular.
+- Bootstrap: libreria per facilitare lo stile e layout dell'applicazione.
+- CSS: per lo stile e il layout dell'applicazione.
+- HTML: per la struttura delle pagine web.
+- Service: modulo per l'accesso ai dati relativi ai libri.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installazione
 
-## Running unit tests
+Segui questi passaggi per installare e avviare l'applicazione localmente:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona il repository:
 
-## Running end-to-end tests
+    ```git clone https://github.com/manuelmelchiorri96/book-boost.git```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Entra nella directory del progetto:
 
-## Further help
+    ```cd book-boost```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Installa le dipendenze:
+
+    ```npm install```
+
+4. Avvia l'applicazione:
+
+    ```ng serve```
+
+5. Apri il browser e vai all'indirizzo [http://localhost:4200/](http://localhost:4200/) per visualizzare l'applicazione.
+
+## Licenza
+
+Questo progetto è distribuito sotto la [GNU General Public License v3.0](./LICENSE.txt). Vedere il file `LICENSE` per ulteriori informazioni.
