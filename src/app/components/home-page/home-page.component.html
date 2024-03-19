@@ -1,29 +1,39 @@
-<!-- home-page.component.html -->
 <div class="container">
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-8">
-            <h1 class="text-center mb-4">Incentivare la Lettura con Open Library</h1>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control form-control-lg" placeholder="Cerca libri..."
-                    [(ngModel)]="searchTerm">
-                <div class="input-group-append">
-                    <button class="btn btn-primary btn-lg" type="button" (click)="searchBooks()">Cerca</button>
-                </div>
-            </div>
-        </div>
+    <div class="box-intro">
+        <img src="../assets/logo.PNG" alt="" class="logo">
+        <h2 class="title mb-0 ml-3">BookBoost</h2>
+    </div>
+    <div class="pb-4 pt-4 form-group">
+        <input type="text" class="form-control" placeholder="Cerca libri..." [(ngModel)]="searchTerm">
+        <button class="btn btn-primary" type="button" (click)="searchBooks()">Cerca</button>
     </div>
     <div class="row justify-content-center mt-4" *ngIf="searchResultsVisible">
-        <div class="col-md-8">
-            <h2 class="text-center mb-3">Risultati della ricerca</h2>
+        <div class="col-md-8 w-100">
             <ul class="list-group" *ngIf="searchResults.length > 0; else noResults">
                 <li class="list-group-item list-group-item-action cursor-pointer" *ngFor="let book of searchResults"
                     (click)="showBookDetails(book.key)">
-                    <strong>{{ book.title }}</strong>
+                    📖 <strong>{{ book.title }}</strong> -
+                    <ng-container *ngFor="let author of book.authors; let last = last">
+                        {{ author.name }}<span *ngIf="!last">, </span>
+                    </ng-container>
                 </li>
             </ul>
             <ng-template #noResults>
                 <p class="text-center">Nessun risultato trovato</p>
             </ng-template>
+        </div>
+    </div>
+    <div *ngIf="bookDescription" class="book-description">
+        <div class="book-description-container">
+            <div class="container">
+                <div class="text-container">
+                    <h3>Descrizione del libro:</h3>
+                    <p>{{ bookDescription }}</p>
+                </div>
+                <div class="button-container">
+                    <button class="btn btn-primary" (click)="chiudi()">Chiudi</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
